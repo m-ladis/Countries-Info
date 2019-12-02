@@ -3,11 +3,14 @@ package ladis.rma_projekt;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class CountryDetails extends AppCompatActivity {
+public class CountryDetails extends AppCompatActivity implements View.OnClickListener {
 
+    private Button backButton;
     private TextView name;
     private TextView capital;
     private TextView relevance;
@@ -32,6 +35,7 @@ public class CountryDetails extends AppCompatActivity {
         Intent intent = getIntent();
         Country country = (Country) intent.getSerializableExtra("selectedCountry");
 
+        backButton = findViewById(R.id.backButton);
         name = findViewById(R.id.name);
         capital = findViewById(R.id.capital);
         relevance = findViewById(R.id.relevance);
@@ -47,6 +51,8 @@ public class CountryDetails extends AppCompatActivity {
         alpha3Code = findViewById(R.id.alpha3Code);
         currencies = findViewById(R.id.currencies);
         languages = findViewById(R.id.languages);
+
+        backButton.setOnClickListener(this);
 
         updateUI(country);
     }
@@ -92,6 +98,13 @@ public class CountryDetails extends AppCompatActivity {
             TextView textView = new TextView(this);
             textView.setText(language);
             languages.addView(textView);
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        if(v == backButton){
+            finish();
         }
     }
 }

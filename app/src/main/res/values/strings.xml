@@ -3,4 +3,19 @@
     <string name="api_url">https://restcountries-v1.p.rapidapi.com/all</string>
     <string name="api_host">restcountries-v1.p.rapidapi.com</string>
     <string name="api_key">da9d1fa43emsh21deda88faa8bdap156e95jsn62edbcc6060f</string>
+    <string name="label_name">Name</string>
+    <string name="label_capital">Capital</string>
+    <string name="label_relevance">Relevance</string>
+    <string name="label_region">Region</string>
+    <string name="label_subregion">Subregion</string>
+    <string name="label_population">Population</string>
+    <string name="label_demonym">Demonym</string>
+    <string name="label_area">Area</string>
+    <string name="label_timezones">Timezones</string>
+    <string name="label_callingCodes">Calling codes</string>
+    <string name="label_topLevelDomain">Top level domain</string>
+    <string name="label_alpha2Code">Alpha2Code</string>
+    <string name="label_alpha3Code">Alpha3Code</string>
+    <string name="label_currencies">Currencies</string>
+    <string name="label_languages">Languages</string>
 </resources>
